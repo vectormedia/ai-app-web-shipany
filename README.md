@@ -1,5 +1,9 @@
 # ShipAny Template Two
 
+## Preview
+
+[https://cf-two.shipany.site/](https://cf-two.shipany.site/)
+
 ## Doc
 
 [https://www.shipany.ai/zh/docs](https://www.shipany.ai/zh/docs)

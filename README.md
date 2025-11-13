@@ -9,6 +9,14 @@
 
 [https://www.shipany.ai/zh/docs](https://www.shipany.ai/zh/docs)
 
+## Branch
+
+- `main`: two main branch
+- `one/main`: one main branch
+- `one/cloudfare`: one cloudfare branch
+- `one/nanobanana`: one nanobanana branch [coming soon]
+
+
 ## Getting Started
 
 1. Clone code and install

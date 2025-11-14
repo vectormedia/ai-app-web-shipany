@@ -16,6 +16,10 @@
 - `one/cloudfare`: one cloudfare branch
 - `one/nanobanana`: one nanobanana branch [coming soon]
 
+## .env.example
+
+OAuth、支付、存储等配置都是通过 Admin Settings UI（/admin/settings）在数据库中管理的，而不是通过.env环境变量。
+
 
 ## Getting Started
 

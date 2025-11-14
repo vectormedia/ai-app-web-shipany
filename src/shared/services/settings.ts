@@ -12,9 +12,10 @@ export interface Setting {
     value: string;
   }[];
   tip?: string;
-  value?: string;
+  value?: string | string[] | boolean | number;
   group?: string;
   tab?: string;
+  attributes?: Record<string, any>;
 }
 
 export interface SettingGroup {
@@ -118,13 +119,15 @@ export async function getSettingGroups() {
     {
       name: 'stripe',
       title: t('groups.stripe'),
-      description: 'custom your stripe settings',
+      description:
+        'custom your <a href="https://stripe.com" class="text-primary" target="_blank">Stripe</a> settings',
       tab: 'payment',
     },
     {
       name: 'creem',
       title: t('groups.creem'),
-      description: 'custom your creem settings',
+      description:
+        'custom your <a href="https://www.creem.io" class="text-primary" target="_blank">Creem</a> settings',
       tab: 'payment',
     },
     {
@@ -375,6 +378,20 @@ export async function getSettings() {
       tab: 'payment',
     },
     {
+      name: 'stripe_payment_methods',
+      title: 'Stripe Payment Methods',
+      type: 'checkbox',
+      tip: 'If not set, only card payment method will be enabled.',
+      options: [
+        { title: 'Card', value: 'card' },
+        { title: 'Wechat Pay', value: 'wechat_pay' },
+        { title: 'Alipay', value: 'alipay' },
+      ],
+      value: ['card'],
+      group: 'stripe',
+      tab: 'payment',
+    },
+    {
       name: 'creem_enabled',
       title: 'Creem Enabled',
       type: 'switch',
@@ -410,6 +427,22 @@ export async function getSettings() {
       group: 'creem',
       tab: 'payment',
       tip: 'Creem Signing Secret is used to verify the webhook notification from Creem',
+    },
+    {
+      name: 'creem_product_ids',
+      title: 'Creem Product IDs Mapping',
+      type: 'textarea',
+      attributes: {
+        rows: 6,
+      },
+      placeholder: `{
+  "starter": "prod_xxx",
+  "standard-monthly": "prod_xxx",
+  "premium-yearly": "prod_xxx"
+}`,
+      group: 'creem',
+      tab: 'payment',
+      tip: 'Map the product_id in pricing table to <a href="https://www.creem.io/dashboard/products" class="text-primary" target="_blank">payment_product_id</a> created in Creem. Must be a valid JSON object.',
     },
     {
       name: 'paypal_enabled',

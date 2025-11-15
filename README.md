@@ -29,11 +29,11 @@
 答：作者在发版Two后发推告知：文档正在努力更新中（目录点击后大多都是占位），再等等。
 
 ### Two 与 One 有什么区别？
-答： 
-（1）Two已实现订阅续费自监听和自动发放积分功能；
-（2）Two内置Al图片生成器、AI 聊天机器人、Al 音乐生成器；
-（3）Two基础功能：后台管理系统（CMS、RBAC等）、用户中心User Console、配置话Landing Page;
-（4）Two支付功能：支持Stripe、Creem、Paypal三种收款渠道（Stripe已支持支付宝、微信收款方式）；
+答：<br/> 
+- Two已实现订阅续费自监听和自动发放积分功能；<br/>
+- Two内置Al图片生成器、AI 聊天机器人、Al 音乐生成器；<br/>
+- Two基础功能：后台管理系统（CMS、RBAC等）、用户中心User Console、配置话Landing Page;<br/>
+- Two支付功能：支持Stripe、Creem、Paypal三种收款渠道（Stripe已支持支付宝、微信收款方式）；
 
 ## Getting Started
 

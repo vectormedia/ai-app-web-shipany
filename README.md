@@ -22,6 +22,12 @@
 
 答：OAuth、支付、存储等配置都是通过 Admin Settings UI（/admin/settings）在数据库中管理的，而不是通过.env环境变量。
 
+### 官方文档为什么内容那么少？
+
+![](https://cdn.jsdelivr.net/gh/ai-boomer/PicCDN/2025-11-15/1763177744414-image.png)
+
+答：作者在发版Two后发推告知：文档正在努力更新中（目录点击后大多都是占位），再等等。
+
 
 ## Getting Started
 

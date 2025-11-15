@@ -20,7 +20,12 @@
 
 ### .env.example中为什么配置这么少？
 
-答：OAuth、支付、存储等配置都是通过 Admin Settings UI（/admin/settings）在数据库中管理的，而不是通过.env环境变量。
+答：OAuth、支付、存储等配置都是通过 Admin Settings UI（/admin/settings）在数据库中管理的，而不是通过.env环境变量。<br/>
+所有OAuth、支付、存储的高级配置都通过管理界面完成：
+1. 启动应用后访问 http://localhost:3000/admin/settings
+2. 使用管理员账号登录
+3. 在对应的标签页填写配置信息
+4. 保存后配置立即生效，无需重启应用
 
 ### 官方文档为什么内容那么少？
 

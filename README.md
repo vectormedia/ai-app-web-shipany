@@ -40,6 +40,10 @@
 - Two基础功能：后台管理系统（CMS、RBAC等）、用户中心User Console、配置话Landing Page;<br/>
 - Two支付功能：支持Stripe、Creem、Paypal三种收款渠道（Stripe已支持支付宝、微信收款方式）；
 
+### ShipAny Two 架构要点总结 
+
+[-> Two 架构要点总结](https://github.com/boomer1678/shipany-template/issues/1)
+
 ## Getting Started
 
 1. Clone code and install

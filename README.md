@@ -7,9 +7,11 @@
 
 ## Doc
 
-[https://www.shipany.ai/zh/docs](https://www.shipany.ai/zh/docs)
+[✨https://www.shipany.ai/zh/docs](https://www.shipany.ai/zh/docs)
 
-[Shipany按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
+[✨Shipany按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
+
+[✨Shipany更新日志](https://github.com/boomer1678/shipany-template/issues/3)
 
 ## Branch
 

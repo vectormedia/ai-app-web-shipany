@@ -7,7 +7,7 @@
 
 ## Doc
 
-[✨https://www.shipany.ai/zh/docs](https://www.shipany.ai/zh/docs)
+[✨Shipany官方文档](https://www.shipany.ai/zh/docs)
 
 [✨Shipany按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
 
@@ -36,7 +36,7 @@
 
 <img width="300"  alt="Image" src="https://cdn.jsdelivr.net/gh/ai-boomer/PicCDN/2025-11-15/1763177744414-image.png" />
 
-答：作者在发版Two后发推告知：文档正在努力更新中（目录点击后大多都是占位），再等等。
+答：作者在发版Two后发推告知：[文档](https://www.shipany.ai/zh/docs)正在努力更新中（目录点击后大多都是占位），再等等。
 
 ### Two 与 One 有什么区别？
 答：<br/> 

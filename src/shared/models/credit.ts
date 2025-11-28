@@ -148,17 +148,19 @@ export async function consumeCredits({
   scene,
   description,
   metadata,
+  tx,
 }: {
   userId: string;
   credits: number; // credits to consume
   scene?: string;
   description?: string;
   metadata?: string;
+  tx?: any;
 }) {
   const currentTime = new Date();
 
   // consume credits
-  const result = await db().transaction(async (tx) => {
+  const execute = async (tx: any) => {
     // 1. check credits balance
     const [creditsBalance] = await tx
       .select({
@@ -282,9 +284,15 @@ export async function consumeCredits({
     await tx.insert(credit).values(consumedCredit);
 
     return consumedCredit;
-  });
+  };
 
-  return result;
+  // use provided transaction
+  if (tx) {
+    return await execute(tx);
+  }
+
+  // use default transaction
+  return await db().transaction(execute);
 }
 
 // get remaining credits

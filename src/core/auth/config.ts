@@ -5,12 +5,11 @@ import { db } from '@/core/db';
 import { envConfigs } from '@/config';
 import * as schema from '@/config/db/schema';
 import { getUuid } from '@/shared/lib/hash';
-import { getAllConfigs } from '@/shared/models/config';
 import { grantCreditsForNewUser } from '@/shared/models/credit';
 
 // Static auth options - NO database connection
 // This ensures zero database calls during build time
-export const authOptions = {
+const authOptions = {
   appName: envConfigs.app_name,
   baseURL: envConfigs.auth_url,
   secret: envConfigs.auth_secret,
@@ -30,10 +29,8 @@ export const authOptions = {
   },
 };
 
-// Dynamic auth options - WITH database connection
-// Only used in API routes that actually need database access
-export async function getAuthOptions() {
-  const configs = await getAllConfigs();
+// get auth options with configs
+export async function getAuthOptions(configs: Record<string, string>) {
   return {
     ...authOptions,
     // Add database connection only when actually needed (runtime)
@@ -72,10 +69,11 @@ export async function getAuthOptions() {
   };
 }
 
+// get social providers with configs
 export async function getSocialProviders(configs: Record<string, string>) {
-  // get configs from db
   const providers: any = {};
 
+  // google auth
   if (configs.google_client_id && configs.google_client_secret) {
     providers.google = {
       clientId: configs.google_client_id,
@@ -83,6 +81,7 @@ export async function getSocialProviders(configs: Record<string, string>) {
     };
   }
 
+  // github auth
   if (configs.github_client_id && configs.github_client_secret) {
     providers.github = {
       clientId: configs.github_client_id,
@@ -93,6 +92,7 @@ export async function getSocialProviders(configs: Record<string, string>) {
   return providers;
 }
 
+// convert database provider to better-auth database provider
 export function getDatabaseProvider(
   provider: string
 ): 'sqlite' | 'pg' | 'mysql' {

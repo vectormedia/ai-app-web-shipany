@@ -19,8 +19,8 @@
 
 - `main`: two main branch
 - `cloudfare`: two cloudfare branch
-- `one/main`: one main branch
-- `one/cloudfare`: one cloudfare branch
+- `one/main`: one main branch (2025-08-06(v2.6.0))
+- `one/cloudfare`: one cloudfare branch 
 - `one/nanobanana`: one nanobanana branch [coming soon]
 
 ## 常见问题

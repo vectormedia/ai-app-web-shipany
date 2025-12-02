@@ -43,6 +43,12 @@
               "icon": "RiMusic2Line"
             },
             {
+              "title": "AI Video Generator",
+              "description": "Use AI to generate videos",
+              "url": "/ai-video-generator",
+              "icon": "RiVideoLine"
+            },
+            {
               "title": "AI Chatbot",
               "description": "Chat with AI chatbot",
               "url": "/chat",

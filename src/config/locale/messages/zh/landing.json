@@ -43,6 +43,12 @@
               "icon": "RiMusic2Line"
             },
             {
+              "title": "AI 视频生成器",
+              "description": "使用 AI 生成视频",
+              "url": "/ai-video-generator",
+              "icon": "RiVideoLine"
+            },
+            {
               "title": "AI 聊天机器人",
               "description": "与 AI 聊天机器人对话",
               "url": "/chat",

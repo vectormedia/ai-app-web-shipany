@@ -8,13 +8,17 @@
 
 ## Doc
 
-[✨Shipany官方文档 作者已更新完](https://www.shipany.ai/zh/docs)
+[✨ShipanyTwo官方文档（作者已更新完）](https://www.shipany.ai/zh/docs)
 
-[✨Shipany按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
+[✨ShipanyTwo按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
 
-[✨Shipany更新日志](https://github.com/boomer1678/shipany-template/issues/3)
+[✨ShipanyTwo更新日志](https://github.com/boomer1678/shipany-template/issues/3)
 
 [✨ShipAnyTwo架构要点总结](https://github.com/boomer1678/shipany-template/issues/1)
+
+## Video
+
+[✨ShipanyTwo实战课程：AI壁纸生成器开发视频教学 2025-12-03](https://github.com/boomer1678/shipany-template/issues/6)
 
 ## Branch
 

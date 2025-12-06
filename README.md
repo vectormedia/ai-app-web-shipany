@@ -20,7 +20,9 @@
 
 ## Video
 
-[✨ShipanyTwo实战课程：AI壁纸生成器开发视频教学 2025-12-03](https://github.com/boomer1678/shipany-template/issues/6)
+[✨ShipanyTwo实战课程：AI壁纸生成器开发视频教学(2025-12-03)](https://github.com/boomer1678/shipany-template/issues/6)
+
+[✨ShipanyTwo实战课程：从零搭建了一个一站式 AI 生成平台(2025-11-26)](https://github.com/boomer1678/shipany-template/issues/9)
 
 ## Branch
 

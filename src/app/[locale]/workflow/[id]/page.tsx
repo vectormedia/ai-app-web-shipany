@@ -1,6 +1,7 @@
 "use client";
 
 import { FlowBuilder } from "@/components/flow-builder/flow-builder";
+import { SidebarModule } from "@/components/flow-builder/components/blocks/sidebar/sidebar-module";
 import { useFlowStore } from "@/stores/flow-store";
 import { ReactFlowProvider } from "@xyflow/react";
 import { useEffect, use } from "react";
@@ -45,8 +46,9 @@ export default function WorkflowPage({ params }: { params: Promise<{ id: string 
 
   return (
     <ReactFlowProvider>
-      <div className="flex flex-col h-screen w-full">
+      <div className="flex h-screen w-full">
         <FlowBuilder />
+        <SidebarModule />
       </div>
     </ReactFlowProvider>
   );

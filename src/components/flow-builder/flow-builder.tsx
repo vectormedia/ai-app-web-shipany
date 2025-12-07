@@ -75,7 +75,7 @@ export const FlowBuilder = () => {
   }, [nodes, edges, deleteNode, deleteEdge]);
 
   return (
-    <>
+    <div className="flex flex-col h-screen w-full">
       <div className="h-14 border-b border-card-foreground/10 from-primary/40 p-2 to-transparent bg-gradient-to-r w-full  items-center flex justify-between">
         <div className="inline-flex items-center gap-2">
           <Button
@@ -100,33 +100,35 @@ export const FlowBuilder = () => {
           </div>
         )}
       </div>
-      <div className="relative w-full h-[calc(100vh-3.5rem)]">
-        <ReactFlow
-          proOptions={{ hideAttribution: true }}
-          onInit={({ fitView }) => fitView().then()}
-          nodeTypes={NODE_TYPES}
-          nodes={nodes}
-          onNodesChange={handleNodesChange}
-          edgeTypes={edgeTypes}
-          edges={edges}
-          onEdgesChange={onEdgesChange}
-          onConnect={onConnect}
-          onDrop={onDrop}
-          onDragOver={onDragOver}
-          onNodesDelete={handleDeleteElements}
-          selectionMode={SelectionMode.Full}
-          multiSelectionKeyCode="Control"
-          selectionOnDrag={true}
-          selectionKeyCode={null}
-          deleteKeyCode={deleteKeyCode}
-          snapGrid={[16, 16]}
-          snapToGrid
-          fitView
-        >
-          <Background gap={24} />
-          <Controls />
-        </ReactFlow>
+      <div className="flex flex-1 divide-x divide-card-foreground/10">
+        <div className="relative flex-1">
+          <ReactFlow
+            proOptions={{ hideAttribution: true }}
+            onInit={({ fitView }) => fitView().then()}
+            nodeTypes={NODE_TYPES}
+            nodes={nodes}
+            onNodesChange={handleNodesChange}
+            edgeTypes={edgeTypes}
+            edges={edges}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            onDrop={onDrop}
+            onDragOver={onDragOver}
+            onNodesDelete={handleDeleteElements}
+            selectionMode={SelectionMode.Full}
+            multiSelectionKeyCode="Control"
+            selectionOnDrag={true}
+            selectionKeyCode={null}
+            deleteKeyCode={deleteKeyCode}
+            snapGrid={[16, 16]}
+            snapToGrid
+            fitView
+          >
+            <Background gap={24} />
+            <Controls />
+          </ReactFlow>
+        </div>
       </div>
-    </>
+    </div>
   );
 };

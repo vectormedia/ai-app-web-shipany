@@ -8,15 +8,16 @@
 
 ## Doc
 
-[✨ShipanyTwo官方文档（作者已更新完）](https://www.shipany.ai/zh/docs)
+[✨ShipanyTwo官方文档](https://www.shipany.ai/zh/docs)
 
 [✨ShipanyTwo按照官方文档一步步走过程记录](https://github.com/boomer1678/shipany-template/issues/2)
 
 [✨ShipanyTwo更新日志](https://github.com/boomer1678/shipany-template/issues/3)
 
+[✨ShipAnyTwo常见问题](https://github.com/boomer1678/shipany-template/issues/7)
+
 [✨ShipAnyTwo架构要点总结](https://github.com/boomer1678/shipany-template/issues/1)
 
-[✨ShipAnyTwo常见问题](https://github.com/boomer1678/shipany-template/issues/7)
 
 ## Video
 

@@ -2,7 +2,10 @@
 
 ## Preview
 
-[https://cf-two.shipany.site/](https://cf-two.shipany.site/)
+[https://cf-two.shipany.site/](https://cf-two.shipany.site/) [如果官网预览看到的不是最新就访问下面我部署到Cloudflare的地址预览最新版，但是注意：登录等不可用，仅仅是部署成功网站（能看个大概）哈]
+
+[https://shipany-two.16781678.xyz/](https://shipany-two.16781678.xyz/)
+
 
 ## 由于多次发生仓库被提交脏代码，给其他同学带来不便，现将仓库写权限关闭，仓库成员仅可读！
 

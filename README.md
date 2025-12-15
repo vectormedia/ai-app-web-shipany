@@ -1,6 +1,6 @@
 # ShipAny Template Two
 
-## Preview
+## Preview1
 
 [https://cf-two.shipany.site/](https://cf-two.shipany.site/) [如果官网预览看到的不是最新就访问下面我部署到Cloudflare的地址预览最新版，但是注意：登录等不可用，仅仅是部署成功网站（能看个大概）哈]
 

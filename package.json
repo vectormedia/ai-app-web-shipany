@@ -2,6 +2,7 @@
   "name": "shipany-template-two",
   "version": "1.6.0",
   "private": true,
+  "main": "electron/main.js",
   "author": "ShipAny.ai",
   "homepage": "https://shipany.ai",
   "repository": {
@@ -32,11 +33,16 @@
     "auth:generate": "npx @better-auth/cli generate --config=src/core/auth/index.ts",
     "rbac:init": "npx tsx scripts/init-rbac.ts",
     "rbac:assign": "npx tsx scripts/assign-role.ts",
-    "postinstall": "fumadocs-mdx",
+    "postinstall": "fumadocs-mdx && electron-builder install-app-deps",
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf:typegen": "wrangler types --env-interface CloudflareEnv src/shared/types/cloudflare.d.ts"
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv src/shared/types/cloudflare.d.ts",
+    "electron:dev": "concurrently -n next,electron \"pnpm dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "pnpm build && electron-builder --mac",
+    "electron:build:dmg": "pnpm build && electron-builder --mac dmg",
+    "electron:build:pkg": "pnpm build && electron-builder --mac pkg",
+    "electron:build:mas": "pnpm build && electron-builder --mac mas"
   },
   "dependencies": {
     "@ai-sdk/react": "^2.0.89",
@@ -91,6 +97,8 @@
     "creem": "^0.3.37",
     "dotenv": "^17.2.0",
     "drizzle-orm": "^0.44.2",
+    "electron-serve": "^3.0.0",
+    "electron-store": "^11.0.2",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.12",
@@ -153,7 +161,11 @@
     "@types/react-lazy-load-image-component": "^1.6.4",
     "autoprefixer": "^10.4.21",
     "babel-plugin-react-compiler": "^1.0.0",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
     "drizzle-kit": "^0.31.4",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.37.0",
     "eslint-config-next": "16.0.7",
     "postcss": "^8.5.6",
@@ -163,12 +175,20 @@
     "tsx": "^4.20.3",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5",
+    "wait-on": "^9.0.3",
     "wrangler": "^4.34.0"
   },
   "pnpm": {
     "overrides": {
       "@types/react": "19.2.2",
       "@types/react-dom": "19.2.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "electron",
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }

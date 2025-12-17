@@ -11,6 +11,7 @@ import { getAdsService } from '@/shared/services/ads';
 import { getAffiliateService } from '@/shared/services/affiliate';
 import { getAnalyticsService } from '@/shared/services/analytics';
 import { getCustomerService } from '@/shared/services/customer_service';
+import { ElectronDragRegion } from '@/shared/components/electron-drag-region';
 
 const notoSansMono = Noto_Sans_Mono({
   subsets: ['latin'],
@@ -145,6 +146,9 @@ export default async function RootLayout({
         {customerServiceHeadScripts}
       </head>
       <body suppressHydrationWarning className="overflow-x-hidden">
+        {/* Electron window drag region - only renders in Electron */}
+        <ElectronDragRegion />
+
         <NextTopLoader
           color="#6466F1"
           initialPosition={0.08}

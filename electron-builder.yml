@@ -1,0 +1,84 @@
+appId: com.shipany.app
+productName: ShipAny
+copyright: Copyright © 2024 ShipAny.ai
+
+# Directory configuration
+directories:
+  output: dist-electron
+  buildResources: build
+
+# Files to include
+files:
+  - electron/**/*
+  - "!node_modules"
+  - "!src"
+  - "!content"
+  - "!docs"
+  - "!.next"
+  - "!.git"
+
+# Extra resources - Next.js standalone output
+extraResources:
+  - from: .next/standalone
+    to: standalone
+    filter:
+      - "**/*"
+  - from: .next/static
+    to: standalone/.next/static
+    filter:
+      - "**/*"
+  - from: public
+    to: standalone/public
+    filter:
+      - "**/*"
+      - "!icons"
+
+# macOS configuration
+mac:
+  category: public.app-category.productivity
+  icon: public/icons/icon.icns
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+    - target: zip
+      arch:
+        - x64
+        - arm64
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  darkModeSupport: true
+
+# DMG configuration
+dmg:
+  icon: public/icons/icon.icns
+  iconSize: 100
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+  window:
+    width: 540
+    height: 380
+
+# Mac App Store configuration (optional)
+mas:
+  category: public.app-category.productivity
+  entitlements: build/entitlements.mas.plist
+  entitlementsInherit: build/entitlements.mas.inherit.plist
+
+# Publish configuration
+publish:
+  provider: github
+  releaseType: release
+
+# Build options
+buildDependenciesFromSource: false
+nodeGypRebuild: false
+npmRebuild: true

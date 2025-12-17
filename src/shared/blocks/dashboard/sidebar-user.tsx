@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { signOut } from '@/core/auth/client';
 import { Link, useRouter } from '@/core/i18n/navigation';
 import { SmartIcon } from '@/shared/blocks/common';
-import { SignModal } from '@/shared/blocks/sign/sign-modal';
+import { ExtendedSignModal } from '@/extensions/auth/wechat';
 import {
   Avatar,
   AvatarFallback,
@@ -168,7 +168,7 @@ export function SidebarUser({ user }: { user: SidebarUserType }) {
         <SidebarMenu />
       )}
 
-      <SignModal callbackUrl={user.signin_callback || '/'} />
+      <ExtendedSignModal callbackUrl={user.signin_callback || '/'} />
     </>
   );
 }

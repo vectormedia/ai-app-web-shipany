@@ -25,7 +25,7 @@ import { cn } from '@/shared/lib/utils';
 import { NavItem, UserNav } from '@/shared/types/blocks/common';
 
 import { SmartIcon } from '../common/smart-icon';
-import { SignModal } from './sign-modal';
+import { ExtendedSignModal } from '@/extensions/auth/wechat';
 
 export function SignUser({
   isScrolled,
@@ -162,7 +162,7 @@ export function SignUser({
           >
             <span>{t('sign_in_title')}</span>
           </Button>
-          <SignModal />
+          <ExtendedSignModal />
         </div>
       )}
     </>

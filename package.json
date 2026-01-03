@@ -33,7 +33,7 @@
     "auth:generate": "npx @better-auth/cli generate --config=src/core/auth/index.ts",
     "rbac:init": "npx tsx scripts/init-rbac.ts",
     "rbac:assign": "npx tsx scripts/assign-role.ts",
-    "postinstall": "fumadocs-mdx && electron-builder install-app-deps",
+    "postinstall": "fumadocs-mdx && ([ -z \"$VERCEL\" ] && electron-builder install-app-deps || true)",
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",

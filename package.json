@@ -188,7 +188,8 @@
       "electron",
       "esbuild",
       "sharp",
-      "unrs-resolver"
+      "unrs-resolver",
+      "workerd"
     ]
   }
 }
